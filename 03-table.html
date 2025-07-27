@@ -27,8 +27,29 @@
       }
 
       table {
-        background-color: red;
         margin: 100px auto;
+        /* border: 1px solid gray; */
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        /* border: 1px solid gray; */
+        padding: 16px 24px;
+        text-align: left;
+      }
+      thead th {
+        background-color: #087f5b;
+        color: #fff;
+        width: 25%;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #f1f3f5;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #dee2e6;
       }
     </style>
   </head>
@@ -43,31 +64,31 @@
         </tr>
       </thead>
       <tbody>
-          <tr>
-              <th>Width</th>
-              <td>80 cm</td>
-              <td>60 cm</td>
-              <td>220 cm</td>
-            </tr>
-            <tr>
-                <th>Height</th>
-                <td>100 cm</td>
-                <td>110 cm</td>
-                <td>90 cm</td>
-            </tr>
-            <tr>
-                <th>Deph</th>
-                <td>70 cm</td>
-                <td>65 cm</td>
-                <td>80 cm</td>
-            </tr>
-            <tr>
-                <th>Weight</th>
-                <td>16 kg</td>
-                <td>22 kg</td>
-                <td>80 kg</td>
-            </tr>
-        </table>
-    </tbody>
+        <tr>
+          <th>Width</th>
+          <td>80 cm</td>
+          <td>60 cm</td>
+          <td>220 cm</td>
+        </tr>
+        <tr>
+          <th>Height</th>
+          <td>100 cm</td>
+          <td>110 cm</td>
+          <td>90 cm</td>
+        </tr>
+        <tr>
+          <th>Deph</th>
+          <td>70 cm</td>
+          <td>65 cm</td>
+          <td>80 cm</td>
+        </tr>
+        <tr>
+          <th>Weight</th>
+          <td>16 kg</td>
+          <td>22 kg</td>
+          <td>80 kg</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
