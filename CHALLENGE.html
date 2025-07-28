@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pagination Component - #CHALLENGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       /*
         SPACING SYSTEM (px)
@@ -14,15 +20,64 @@
 
         MAIN COLOR: #087f5b
         */
+      body {
+        font-family: 'Inter', sans-serif;
+        font-size: 10;
+      }
 
-      .btn {
+      button {
+        background-color: #fff;
+        border: 1px solid #087f5b;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all ease 0.3s;
+      }
+
+      button:hover {
+        background-color: #087f5b;
+      }
+      button:hover .btn-icon {
+        stroke: #fff;
+      }
+      .btn-icon {
+        stroke: #087f5b;
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        margin-top: 200px;
+      }
+
+      .link-page:link,
+      .link-page:visited {
+        text-decoration: none;
+        color: #343a40;
         width: 24px;
         height: 24px;
+        /* background-color: #087f5b; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 4px;
+        transition: all ease-out 0.3s;
+      }
+
+      .link-page:active,
+      .link-page:hover,
+      .link-page.open {
+        color: #fff;
+        background-color: #087f5b;
       }
     </style>
   </head>
   <body>
-    <div>
+    <div class="pagination">
       <button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +85,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="btn btn--eft"
+          class="btn-icon btn--left"
         >
           <path
             stroke-linecap="round"
@@ -39,6 +94,14 @@
           />
         </svg>
       </button>
+      <a href="#" class="link-page">1</a>
+      <a href="#" class="link-page">2</a>
+      <a href="#" class="link-page open">3</a>
+      <a href="#" class="link-page">4</a>
+      <a href="#" class="link-page">5</a>
+      <a href="#" class="link-page">6</a>
+      <span>...</span>
+      <a href="#" class="link-page">23</a>
       <button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +109,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="btn btn--right"
+          class="btn-icon btn--right"
         >
           <path
             stroke-linecap="round"
