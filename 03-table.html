@@ -24,6 +24,8 @@
         color: #1a1a0f;
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
       }
 
       table {
@@ -50,6 +52,30 @@
 
       tbody tr:nth-child(even) {
         background-color: #dee2e6;
+      }
+
+      .btn--back {
+        width: 200px;
+        height: 50px;
+        margin-bottom: 100px;
+        background-color: #fff;
+        color: #dee2e6;
+        border: 1px solid #087f5b;
+        border-radius: 8px;
+        transition: all ease-in 0.2s;
+        cursor: pointer;
+      }
+      .btn--back:hover {
+        background-color: #087f5b;
+        border: 1px solid #dee2e6;
+      }
+
+      .btn--back:hover .link-back {
+        color: #dee2e6;
+      }
+      .link-back {
+        text-decoration: none;
+        color: #087f5b;
       }
     </style>
   </head>
@@ -90,5 +116,11 @@
         </tr>
       </tbody>
     </table>
+
+    <button class="btn--back">
+      <a href="02-carousel.html" class="link-back"
+        >Back to Carousel Component</a
+      >
+    </button>
   </body>
 </html>
