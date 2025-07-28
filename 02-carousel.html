@@ -111,6 +111,34 @@
       .dot--fill {
         background-color: #087f5b;
       }
+
+      .container-table {
+        background-color: #d3f9d8;
+        border: 1px solid #087f5b;
+        border-radius: 8px;
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+
+      .container-table:hover {
+        background-color: #087f5b;
+      }
+
+      .container-table:hover .link-table {
+        color: #d3f9d8;
+      }
+      .link-table:link,
+      .link-table:visited {
+        color: #087f5b;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
@@ -164,6 +192,10 @@
         <button class="dot">&nbsp;</button>
         <button class="dot">&nbsp;</button>
       </div>
+    </div>
+
+    <div class="container-table">
+      <a href="03-table.html" class="link-table">table</a>
     </div>
   </body>
 </html>
